@@ -5,7 +5,6 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build
-RUN echo "INTENTIONAL CLOUDFORGE FAILURE TEST" && exit 1
 
 # Stage 2: Serve with Nginx
 FROM nginx:alpine
